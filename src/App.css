@@ -1,29 +1,57 @@
+:root {
+  --text-size: clamp(1.2rem, 4vw, 1.6rem)
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
 
 *, *::before, *::after {margin:0; padding:0; box-sizing: inherit;}
 
+
 body {
   font-family: "Raleway", sans-serif;
+  background-image: url("/public/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 h1 {
-  font-size: clamp(2.8rem, 10vw, 3.2rem);
+  font-size: clamp(3.8rem, 10vw, 5.2rem);
   text-align: center;
+  margin-bottom: 20px;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.01);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: purple;
 }
 
 li {
   font-size: clamp(1.3rem, 4vw, 1.6rem);
 }
 
-.done{
+li.ant-list-item.done{
   text-decoration: line-through;
+  opacity: 0.50;
 }
 
 main {
-  width: 89%;
+  width: 69%;
   margin: 0 auto;
   margin-top: 3%;
   padding: 15px; 
   border-radius: 13px;
-  background-color: rgb(235, 234, 234);
+  background-color: rgb(235, 234, 234, 0.788);
+  border: 5px solid purple; 
+  margin-bottom: 50px;
+}
+
+button.ant-btn{
+  background-color: purple;
+}
+
+span.ant-input-affix-wrapper,
+input.ant-input {
+  background-color: rgb(255, 255, 255);
+  font-size: var(--text-size);
 }
