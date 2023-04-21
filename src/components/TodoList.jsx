@@ -18,7 +18,7 @@ export default function TodoList( {loading, itemList, setItemList, setLoading}) 
          size = 'large'
          renderItem={(task) => (
             <List.Item className={(task.done) && 'done'}>
-                {task.Item}
+                {task.item}
             </List.Item>
          )}
         />
