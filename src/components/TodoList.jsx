@@ -39,7 +39,7 @@ export default function TodoList( {loading, itemList, setItemList, setLoading}) 
          loading={loading}
          size = 'large'
          renderItem={(task) => (
-            <List.Item className={(task.done) && 'done'} actions = {[<a className = "actions" onClick={() => handleUpdate(task)}>status</a>, <a className = "actions" onClick={() => handleDelete(task.id)}>delete</a>]}>
+            <List.Item className={(task.done) && 'done'} actions = {[<a className = "actions" onClick={() => handleUpdate(task)}>change status</a>, <a className = "actions" onClick={() => handleDelete(task.id)}>delete</a>]}>
                 {task.item}
             </List.Item>
          )}
