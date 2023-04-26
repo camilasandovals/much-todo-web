@@ -1,3 +1,11 @@
 # Front End for the much-todo-api 
 
-1[screenshot](./public/images/Screenshot%202023-04-21%20at%203.33.49%20PM.png)
+App built during week 5 at Boca Code
+
+Database: Firestore (Full CRUD)
+
+API : Express [link](https://github.com/milasandovals/much-todo-api)
+
+FrontEnd: React / JavaScript
+
+![screenshot](./public/images/screen.png)
