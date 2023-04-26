@@ -55,3 +55,7 @@ input.ant-input {
   background-color: rgb(255, 255, 255);
   font-size: var(--text-size);
 }
+
+.actions {
+  font-size: 20px;
+}

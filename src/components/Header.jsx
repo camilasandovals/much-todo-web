@@ -4,9 +4,10 @@ export default function Header( {setItemList , setLoading}) {
 
 const handleAdd = async (value) => {
 
-    if(value.length < 4) return 
+    if(value.length < 6) return 
 
     setLoading(true)
+    
     const newItem = {
         done: false,
         userId: "me",
