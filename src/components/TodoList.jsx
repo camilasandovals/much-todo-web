@@ -17,7 +17,7 @@ export default function TodoList( {loading, itemList, setItemList, setLoading}) 
         .then(setItemList)
         .catch(alert)
         .finally(() => setLoading(false))
-    }, [])
+    }, [itemList])
     return (
     <section>
         <List
