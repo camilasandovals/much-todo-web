@@ -6,6 +6,11 @@ import { useNavigate } from "react-router-dom"
 
 export default function Home({loading, itemList, setItemList, setLoading, email}){
     const navigate = useNavigate();
+
+    if(!email){
+        navigate("/login")
+    }
+
     return (
         <>  <h2>Welcome {email}</h2>
             <main>
@@ -21,8 +26,9 @@ export default function Home({loading, itemList, setItemList, setLoading, email}
                     setItemList={setItemList} 
                     setLoading={setLoading} />
             </main>
-        
-                <Button className="login-form-button" onClick={() => navigate("/login")}>Logout</Button>
+            <section className="button-container">
+                <Button type="primary" onClick={() => navigate("/login")}>Logout</Button>
+            </section>
          
         </>
     )

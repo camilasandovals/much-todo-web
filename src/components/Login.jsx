@@ -38,6 +38,9 @@ export default function Login({email, setEmail, password, setPassword, user, set
     return(
         <main>
             <h1>Login</h1>
+            <div className='member-text'>
+                    Or <a href="http://localhost:3000/signup">register now!</a>
+            </div>
             <Form
             name="normal_login"
             className="login-form"
@@ -75,14 +78,11 @@ export default function Login({email, setEmail, password, setPassword, user, set
             </Form.Item> */}
 
             <Form.Item>
-                <div>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
+                
+                    <Button type="primary" htmlType="submit" className="button-container">
                     Log in
                     </Button>
-                </div>
-                <div>
-                    Or <a href="http://localhost:3000/signup">register now!</a>
-                </div>
+
             </Form.Item>
             </Form>
         </main>

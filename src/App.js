@@ -15,6 +15,7 @@ function App() {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
   const[user, setUser] = useState()
+  const[isMember, setIsMember] = useState(true);
 
   return (
     <>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/login" element={<Login email={email} setEmail={setEmail} password={password} setPassword={setPassword} user={user} setUser={setUser}/>}/>
       </Routes>
     </BrowserRouter>
+
     <Footer />
     </>
   );

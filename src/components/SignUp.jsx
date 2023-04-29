@@ -44,7 +44,7 @@ export default function SignUp ({email, setEmail, password, setPassword, user, s
     return(
         <main> 
             <h1>Sign Up</h1>
-            <div>
+            <div className='member-text'>
                 Already a member? <a href='http://localhost:3000/login'>Login!</a>
             </div>
             <Form name='normal_login'
@@ -63,8 +63,8 @@ export default function SignUp ({email, setEmail, password, setPassword, user, s
                     onChange = { e => setEmail(e.target.value)}/>
                 </Form.Item>
                 <Form.Item
-                    name='password'
-                    rules={[{ required: true, mesagge: 'Please input your Password!'}]}
+                    name="password"
+                    rules={[{ required: true, message: 'Please input your Password!'}]}
                 >
                     <Input
                     prefix={<LockOutlined
@@ -79,12 +79,14 @@ export default function SignUp ({email, setEmail, password, setPassword, user, s
                     <div>
                         <Button type='primary'
                         htmlType='submit'
-                        className='login-form-button'>
+                        className='button-container'>
                             Sign Up
                         </Button>
                     </div>
                     <div>
-                        Or sign up with <Button onClick = {signInWithGoogle} type='primary'>Google</Button>
+                        Or sign up with <Button 
+                        className='button-container'
+                        onClick = {signInWithGoogle} type='primary'>Google</Button>
                     </div>
 
                 </Form.Item>
