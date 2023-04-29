@@ -11,14 +11,17 @@ import "./App.css";
 function App() {
   const [loading, setLoading] = useState(true);
   const [itemList, setItemList] = useState();
+  const[email, setEmail] = useState("");
+  const[password, setPassword] = useState("");
+  const[user, setUser] = useState()
 
   return (
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Todo loading={loading} itemList={itemList} setItemList = {setItemList} setLoading={setLoading}/>}/>
-        <Route path="/signup" element={<SignUp />}/>
-        <Route path="/login" element={<Login />}/>
+        <Route path="/" element={<Todo email={email} setEmail={setEmail} password={password} setpassword={setPassword} user={user} setUser={setUser} loading={loading} itemList={itemList} setItemList={setItemList} setLoading={setLoading}/>}/>
+        <Route path="/signup" element={<SignUp email={email} setEmail={setEmail} password={password}setpassword={setPassword} user={user} setUser={setUser}/>}/>
+        <Route path="/login" element={<Login email={email} setEmail={setEmail} password={password} setpassword={setPassword} user={user} setUser={setUser}/>}/>
       </Routes>
     </BrowserRouter>
 

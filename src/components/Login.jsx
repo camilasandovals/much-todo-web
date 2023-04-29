@@ -1,13 +1,40 @@
+import { initializeApp } from 'firebase/app'
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input } from 'antd';
 import React from 'react';
 import { useNavigate } from "react-router-dom"
+import { useState } from 'react'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDhfWKwKkFu6T9jp-VxBWuwcmqdYhfbYD4",
+    authDomain: "much-todo-api-cs.firebaseapp.com",
+    projectId: "much-todo-api-cs",
+    storageBucket: "much-todo-api-cs.appspot.com",
+    messagingSenderId: "44024364998",
+    appId: "1:44024364998:web:3e3e7cde31330126acfcc7"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app)
+
 
 export default function Login() {
+    const[email, setEmail] = useState("");
+    const[password, setPassword] = useState("");
+    const[user, setUser] = useState()
 
     const navigate = useNavigate();
 
-    const handleLogin = () => {
+    const handleLogin = async(e) => {
+        if (e && e.preventDefault) {
+            e.preventDefault();
+        }
+        const response = await signInWithEmailAndPassword(auth, email, password)
+            .catch(err => alert(err))
+            console.log(response.user)
+            setUser(response.user);
         navigate("/")
     }
     return(
@@ -23,7 +50,9 @@ export default function Login() {
                 name="username"
                 rules={[{ required: true, message: 'Please input your Username!' }]}
             >
-                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" 
+                value = {email}
+                onChange = {e => setEmail(e.target.value)}/>
             </Form.Item>
             <Form.Item
                 name="password"
@@ -33,6 +62,8 @@ export default function Login() {
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
+                value = {password}
+                onChange={e => setPassword(e.target.value)}
                 />
             </Form.Item>
             {/* <Form.Item>
