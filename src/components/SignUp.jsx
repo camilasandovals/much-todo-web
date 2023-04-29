@@ -19,10 +19,7 @@ const firebaseConfig = {
   const auth = getAuth(app)
 
 
-export default function SignUp () {
-    const [email, setEmail ] = useState('')
-    const [password, setPassword] = useState('')
-    const [user, setUser] = useState();
+export default function SignUp ({email, setEmail, password, setPassword, user, setUser}) {
 
     const navigate = useNavigate();
 

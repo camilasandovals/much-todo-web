@@ -2,10 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from "react";
 import Header from "./components/Header.jsx";
 import TodoList from "./components/TodoList.jsx";
-import Todo from "./components/Todo.jsx";
+import Home from "./components/Home.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Login from "./components/Login.jsx";
 import "./App.css";
+import Footer from './components/Footer.jsx';
 
 
 function App() {
@@ -19,12 +20,12 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Todo email={email} setEmail={setEmail} password={password} setpassword={setPassword} user={user} setUser={setUser} loading={loading} itemList={itemList} setItemList={setItemList} setLoading={setLoading}/>}/>
-        <Route path="/signup" element={<SignUp email={email} setEmail={setEmail} password={password}setpassword={setPassword} user={user} setUser={setUser}/>}/>
-        <Route path="/login" element={<Login email={email} setEmail={setEmail} password={password} setpassword={setPassword} user={user} setUser={setUser}/>}/>
+        <Route path="/" element={<Home email={email} setEmail={setEmail} password={password} setPassword={setPassword} user={user} setUser={setUser} loading={loading} itemList={itemList} setItemList={setItemList} setLoading={setLoading}/>}/>
+        <Route path="/signup" element={<SignUp email={email} setEmail={setEmail} password={password}setPassword={setPassword} user={user} setUser={setUser}/>}/>
+        <Route path="/login" element={<Login email={email} setEmail={setEmail} password={password} setPassword={setPassword} user={user} setUser={setUser}/>}/>
       </Routes>
     </BrowserRouter>
-
+    <Footer />
     </>
   );
 }
