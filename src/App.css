@@ -44,6 +44,8 @@ main {
   background-color: rgb(235, 234, 234, 0.788);
   border: 5px solid purple; 
   margin-bottom: 50px;
+  justify-content: center;
+  text-align: center;
 }
 
 button.ant-btn{

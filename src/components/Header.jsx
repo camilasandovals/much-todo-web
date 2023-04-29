@@ -13,7 +13,7 @@ const handleAdd = async (value) => {
         userId: "me",
         item: value, //what the user typed in is "value"
     }
-    const response = await fetch('http://127.0.0.1:5002/items', {
+    const response = await fetch("https://much-todo-api-cs.web.app/items", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
