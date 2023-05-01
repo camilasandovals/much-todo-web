@@ -12,7 +12,8 @@ export default function Home({loading, itemList, setItemList, setLoading, email}
     }
 
     return (
-        <>  <h2>Welcome {email}</h2>
+        <body>  
+            <h2>Welcome {email}</h2>
             <main>
                 <h1>Much Todo</h1>
         
@@ -26,10 +27,9 @@ export default function Home({loading, itemList, setItemList, setLoading, email}
                     setItemList={setItemList} 
                     setLoading={setLoading} />
             </main>
-            <section className="button-container">
-                <Button type="primary" onClick={() => navigate("/login")}>Logout</Button>
+            <section>
+                <Button className="button-container" type="primary" onClick={() => navigate("/login")}>Logout</Button>
             </section>
-         
-        </>
+        </body>
     )
 }

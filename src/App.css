@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+*, *::before, *::after {margin:0; padding:0; box-sizing: inherit;}
+
 :root {
-  --text-size: clamp(1.2rem, 4vw, 1.6rem)
+  --text-size: clamp(1rem, 3vw, 1.6rem)
 }
 
 #root {
@@ -7,9 +10,6 @@
   flex-direction: column;
   min-height: 100vh;
 }
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
-
-*, *::before, *::after {margin:0; padding:0; box-sizing: inherit;}
 
 
 body {
@@ -19,7 +19,8 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
+  flex: 1;
+ 
 }
 
 h1 {
@@ -32,12 +33,20 @@ h1 {
 }
 
 h2 {
-  color: white;
-  padding: 20px;
+  color: gray;
+  font-size: 15px;
+  padding: 15px;
+  background-color: white;
+  opacity: 0.7;
+  text-align: center;
+}
+
+p {
+  font-size: var(--text-size);
 }
 
 li {
-  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-size: var(--text-size);
 }
 
 li.ant-list-item.done{
@@ -55,10 +64,13 @@ main {
   border: 5px solid purple; 
   justify-content: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 button.ant-btn{
   background-color: purple;
+  font-size: 20px;
+  
 }
 
 span.ant-input-affix-wrapper,
@@ -77,6 +89,9 @@ input.ant-input {
   margin-left: 5px;
 }
 
+section{
+  text-align: center;
+}
 footer {
   text-align: center;
   background-color: rgba(235, 234, 234, 0.745)

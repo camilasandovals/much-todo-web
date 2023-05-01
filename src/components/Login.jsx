@@ -36,10 +36,11 @@ export default function Login({email, setEmail, password, setPassword, user, set
         navigate("/")
     }
     return(
+        <body>
         <main>
             <h1>Login</h1>
             <div className='member-text'>
-                    Or <a href="http://localhost:3000/signup">register now!</a>
+            <p>Or <a href="https://much-todo-cs.web.app/signup">register now!</a></p>
             </div>
             <Form
             name="normal_login"
@@ -86,5 +87,6 @@ export default function Login({email, setEmail, password, setPassword, user, set
             </Form.Item>
             </Form>
         </main>
+        </body>
     )
 }

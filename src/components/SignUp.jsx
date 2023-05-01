@@ -42,10 +42,11 @@ export default function SignUp ({email, setEmail, password, setPassword, user, s
     }
 
     return(
+        <body>
         <main> 
             <h1>Sign Up</h1>
             <div className='member-text'>
-                Already a member? <a href='http://localhost:3000/login'>Login!</a>
+            <p>Already a member <a href="https://much-todo-cs.web.app/login">Login!</a></p>
             </div>
             <Form name='normal_login'
             className='login-form'
@@ -93,5 +94,7 @@ export default function SignUp ({email, setEmail, password, setPassword, user, s
 
             </Form>
         </main>
+        </body>
+
     )
 }
